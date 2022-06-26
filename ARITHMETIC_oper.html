@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BASIC OPERATIONS</title>
+        <script>
+            function add(){
+                var a1 = parseInt(document.getElementById("fnum").value);
+                var a2 = parseInt(document.getElementById("snum").value);
+                var result = a1 +a2;
+                document.getElementById("res").value = result;
+            }
+            function sub(){
+                var a1 = parseInt(document.getElementById("fnum").value);
+                var a2 = parseInt(document.getElementById("snum").value);
+                var result = a1 - a2;
+                document.getElementById("res").value = result;
+            }
+            function mul(){
+                var a1 = parseInt(document.getElementById("fnum").value);
+                var a2 = parseInt(document.getElementById("snum").value);
+                var result = a1 * a2;
+                document.getElementById("res").value = result;
+            }
+            function div(){
+                var a1 = parseInt(document.getElementById("fnum").value);
+                var a2 = parseInt(document.getElementById("snum").value);
+                var result = a1 / a2;
+                document.getElementById("res").value = result;
+            }
+            function mod(){
+                var a1 = parseInt(document.getElementById("fnum").value);
+                var a2 = parseInt(document.getElementById("snum").value);
+                var result = a1 % a2;
+                document.getElementById("res").value = result;
+            }
+
+        </script>
+    </head>
+    <body>
+        <form>
+            <lable>FIRST NUMBER</lable>
+            <input type= "text" name="fnum" id="fnum">
+            <label>SECOUND NUMBER</label>
+            <input type="text" name="snum" id="snum"><br><br>
+            <input type="button" name="sum" value="ADD" onclick="add()">
+            <input type="button" name="su" value="SUB" onclick="sub()">
+            <input type="button" name="MUL" value="MULT" onclick="mul()">
+            <input type="button" name="DIVI" value="DIV" onclick="div()">
+            <input type="button" name="MODU" value="MODU" onclick="mod()"><br><br>
+            <label>RESULT</label>
+            <input name="res" id="res">
+        </form>
+    </body>
+</html>

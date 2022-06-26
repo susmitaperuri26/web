@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <style>
+            div {
+                text-align: center;
+                border-radius: 5px;
+                background-color: #f2f2f2;
+                padding: 20px;
+            }
+            input {
+                width: 20%;
+            }
+        </style>
+    </head>
+    <body>
+        <h3 align="center">Using CSS to style an HTML Form</h3>
+    <div>
+        <form>
+            <label for="fname">First name:</label><br><br>
+            <input type="text" id="fname" name="fname" placeholder="name of yours..."><br><br>
+            <label for="lname">Last Name</label><br><br>
+            <input type="text" id="lname" name="lastname" placeholder="last name of your.."><br><br>
+            <label for="Branch">Branch</label><br><br>
+            <select id="Branch" name="Branch">
+                <option value="Ai&ds">AI&DS</option>
+                <option value="ai&ml">AI&ML</option>
+                <option value="CSE">CSE</option>
+                <option value="it">IT</option>
+                <option value="ECE">ECE</option>
+            </select><br><br>
+            <label for="college">COLLEGE: </label><br><br>
+            <select id="college" name="college">
+                <option value="svecw">SVECW</option>
+                <option value="VIT">VIT</option><br><br>
+            </select>
+        </form>
+    </div>
+    <p>If you only want to style a specific input type, you can use attribute selectors:</p><br>
+
+        input[type=text] - will only select text fields<br>
+        input[type=password] - will only select password fields<br>
+        input[type=number] - will only select number fields etc...
+    </body>
+</html>

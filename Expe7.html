@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>text box with four buttons</title>
+        <script>
+            function factorial(){
+                var a1 = parseInt(document.getElementById("fnum").value)
+                let fact = 1;
+                if(a1 <0){
+                    alert("Factorial for negative number does not exist.");
+                }else if(a1 ==0){
+                    document.getElementById("res").value = 1;
+                }else{
+                    for(let i=1;i<=a1;i++){
+                        fact *= i;    
+                    }
+                    document.getElementById("res").value = fact;
+                }
+            }
+            function fibonacci(){
+                var a1 = parseInt(document.getElementById("fnum").value)
+                let n1 =0 , n2 =1,temp;
+                //document.write(" fibonacci Series  ");
+                for(let i=1;i<=a1;i++){
+                    document.write(n1);
+                    //document.getElementById("res").value=n1;
+                    temp = n1+n2;
+                    n1 = n2;
+                    n2 = temp;
+                }
+            }
+            function primeNumber(){
+                var a1 = parseInt(document.getElementById("fnum").value)
+                let isprime = true;
+                if(a1 ==1){
+                    document.write(" 1 is prime or composite");
+                }else if (a1>1){
+                    for(let i=2;i<a1;i++){
+                        if(a1 %i == 0){
+                            isprime = false;
+                            break;
+                        }
+                    }
+                    if(isprime){
+                        document.write(" It is a prime number");
+                    }else{
+                        document.write(" It is not a prime number");
+                    }
+                }
+                else{
+                    document.write("It is not a prime number");
+                }
+            }
+            function palindrome(){
+                var a1 = document.getElementById("fnum").value
+                const arrayValues = a1.split('');
+                const reverseArray = arrayValues.reverse();
+                const reverseString = reverseArray.join('');
+                if(a1 == reverseString){
+                    document.getElementById("res").value = "it is a palindrome";
+                }else{
+                    document.getElementById("res").value = "it is not a palindrome";
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+        <form>
+            <lable>FIRST NUMBER</lable>
+            <input type= "text" name="fnum" id="fnum"><br><br>
+            <input type="button" name="fact" value="fact" onclick="factorial()">
+            <input type="button" name="fib" value="fib" onclick="fibonacci()">
+            <input type="button" name="prime" value="prime" onclick="primeNumber()">
+            <input type="button" name="pali" value="pali" onclick="palindrome()"><br><br>
+            <label>RESULT</label>
+            <input name="res" id="res">
+        </form>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Pseudo-classes</title>
+        <style>
+            /* unvisited link */
+            a:link {
+              color: red;
+            }
+            
+            /* visited link */
+            a:visited {
+              color: green;
+            }
+            
+            /* mouse over link */
+            a:hover {
+              color: hotpink;
+            }
+            
+            /* selected link */
+            a:active {
+              color: blue;
+            }
+            a.highlight:hover {
+              color: #ff0000;
+              font-size: 22px;
+            }
+            div{
+                background-color: green;
+                color: white;
+                padding: 25px;
+                text-align: center;
+            }
+            div:hover {
+                background-color: blue; 
+            }
+            p {
+                display: none;
+                background-color: yellow;
+                padding: 20px;
+            }
+            div:hover p {
+                display: block;
+            }
+            p i:first-child {
+                color: blue;
+            } 
+        </style>
+    </head>
+    <body>
+        <p>Style an element when a user mouses over it<br>
+        Style visited and unvisited links differently<br>
+        Style an element when it gets focus</p>
+        <p><b><a href="default.asp" target="_blank">Click here</a></b></p>
+        <p><a class="highlight" href="css_syntax.asp">CSS Syntax</a></p>
+        
+        <p>Mouse over the div element below to change its background color:</p>
+        <div>Touch here</div>
+
+        <div>Hover over this div element to show the p element
+            <p> Here I am!</p>
+        </div>
+        
+        <p>I am a <i>susmita</i>. I am a <i>student</i>of SVECW.</p>
+        <p>I am a <i>keerthi</i>. I am a <i>teacher</i>of SVECW.</p>
+
+  
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JAVA Script </title>
+        <script type="text/javascript">
+            function show_alert(){
+                alert("Hello welcome to class");
+            }
+            function ShowPrompt(){
+                name = prompt("Enter your name:");
+                result = confirm("your name is "+name);
+                if(result !=""){
+                    document.write("your name is:"+name);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1> Alert Box</h1>
+        <input type="button" name="b1" value="click here" onclick="show_alert()">
+        <h1>Confirm and prompt Box</h1>
+        <input type="button" value="confirm" onclick="ShowPrompt()"><br>
+        
+    </body>
+</html>
